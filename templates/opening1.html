@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='openingstyl copy.css') }}">
+
+    <link rel="stylesheet" href="CSS/openingstyl copy.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./special.html">
+    <title>ISL</title>
+</head>
+<body>
+    <!-- Inject flashed messages as JSON in a data attribute -->
+    <div id="flash-data" data-messages='{{ get_flashed_messages() | tojson }}'></div>
+  
+    <!-- SweetAlert Flash Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const flashData = document.getElementById("flash-data");
+        const messages = JSON.parse(flashData.dataset.messages);
+  
+        messages.forEach(message => {
+          Swal.fire({
+            title: 'Heads up!',
+            text: message,
+            icon: 'success',
+            confirmButtonText: 'Got it'
+          });
+        });
+      });
+    </script>
+    
+    <header>
+        <div class="TOP">
+          <div id="navbar" class="navbartop">
+              <h1 class="logo">
+                  
+                  <img src="{{ url_for('static', filename='Group1.png') }}" alt="AppName">
+              </h1>
+              
+            </div> 
+          <div class="navi">
+              <ul>
+                <li><a href="{{ url_for('openning') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('registration') }}">Register</a></li>
+              </ul>
+          </div>
+         </div>
+        </header>
+    <div class="bubbles">
+        <div class="bubble-1"></div>
+        <div class="bubble-2"></div>
+        <div class="bubble-3"></div>
+        <div class="bubble-4"></div>
+        <div class="bubble-5"></div>
+        <div class="bubble-6"></div>
+        <div class="bubble-7"></div>
+    </div>
+    
+    <main class="content">
+ 
+        <div class="Video_pannel">
+            <h2>Video Stream</h2>
+            <img src="{{ url_for('video_feed') }}" width="640" height="480">
+        </div>
+
+        <div class="gesture-text-box">
+            <h3>Recognizing Words....</h3>
+            <div id="recognized-words">
+                Waiting for gestures...
+            </div>
+        </div>
+
+    </div>
+    <!-- Clear Button -->
+    <button id="clear-button">
+        Clear
+    </button>
+
+        
+        <script src="static/app.js"></script>
+
+
+        <div class="VideoValue">
+            <form method="POST">
+                <label for="device">Device ID:</label>
+                <input type="number" id="device" name="device" value="{{ args.device }}"><br><br>
+        
+                <label for="width">Width:</label>
+                <input type="number" id="width" name="width" value="{{ args.width }}"><br><br>
+        
+                <label for="height">Height:</label>
+                <input type="number" id="height" name="height" value="{{ args.height }}"><br><br>
+        
+                <label for="min_detection_confidence">Detection Confidence:</label>
+                <input type="number" step="0.1" id="min_detection_confidence" name="min_detection_confidence" value="{{ args.min_detection_confidence }}"><br><br>
+        
+                <label for="min_tracking_confidence">Tracking Confidence:</label>
+                <input type="number" step="0.1" id="min_tracking_confidence" name="min_tracking_confidence" value="{{ args.min_tracking_confidence }}"><br><br>
+        
+                <button class="begin-button" type="submit">Update Settings</button>
+            </form>
+        </div>
+
+        <footer class="footer bg-dark">
+            <div class="social">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="https://mail.google.com/mail/"><i class="fas fa-envelope fa-2x"></i></a>
+          </div>
+          <br>
+          <p>Copyright &copy; 2024</p>
+        </footer>
+    </main>
+
+</body>
+</html>

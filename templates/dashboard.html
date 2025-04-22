@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='openingstyl copy.css') }}">
+
+    <link rel="stylesheet" href="CSS/openingstyl copy.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional: SweetAlert2 for fancy alerts -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./special.html">
+    <title>ISL</title>
+</head>
+<body>
+
+    <header>
+        <div class="TOP">
+          <div id="navbar" class="navbartop">
+              <h1 class="logo">
+                  
+                  <img src="{{ url_for('static', filename='Group1.png') }}" alt="AppName">
+              </h1>
+              
+            </div> 
+          <div class="navi">
+            <ul>
+                <li><a href="{{ url_for('openning') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('registration') }}">Register</a></li>
+            </ul>
+            
+          </div>
+         </div>
+        </header>
+
+    <h1 style="align-content: center; padding: 100px;">INDICATOR Page</h1>
+  
+    <!-- Inject flashed messages as JSON in a data attribute -->
+    <div id="flash-data" data-messages='{{ get_flashed_messages() | tojson }}'></div>
+  
+    <!-- SweetAlert Flash Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const flashData = document.getElementById("flash-data");
+        const messages = JSON.parse(flashData.dataset.messages);
+  
+        messages.forEach(message => {
+          Swal.fire({
+            title: 'Heads up!',
+            text: message,
+            icon: 'success',
+            confirmButtonText: 'Got it'
+          });
+        });
+      });
+    </script>
+    
+  </body>  
+</html>

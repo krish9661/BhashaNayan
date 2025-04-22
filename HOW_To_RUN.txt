@@ -1,0 +1,15 @@
+1> TO BUILD DOCKER
+docker build -t krish7979/bhashanayan:1.0.0 . 
+
+2> TO RUN DOCKER IMAGE
+docker run -p 5000:5000 krish7979/bhashanayan:1.0.0
+
+3> TO RUN THE .TAR FILE FOR DOCKER OFFLINE SAVED IMAGE YOU NEED TO DOWNLOAD DOCKER DESKTOP 
+
+Then, run - docker load -i bhashanayan.tar 
+for loading the docker_image
+
+At last run the 2nd code for running it as a webapp
+
+
+NOTE🎇🎇🎇:- This docker image will not give you access to camera(in WINDOWS AND MAC) only Linux will help....

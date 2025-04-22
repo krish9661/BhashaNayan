@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <link rel="stylesheet" href="CSS/styles.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/">
+    <link rel="stylesheet" href="./special.html">
+    <title>ISL</title>
+</head>
+<body>
+    <header>
+        <div class="TOP">
+          <div id="navbar" class="navbartop">
+              <h1 class="logo">
+                  
+                  <img src="{{ url_for('static', filename='Group1.png') }}" alt="AppName">
+              </h1>
+              
+            </div> 
+          <div class="navi">
+            <ul>
+                <li><a href="{{ url_for('openning') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('registration') }}">Register</a></li>
+            </ul>
+            
+          </div>
+         </div>
+        </header>
+        
+      
+    
+    <main class="content">
+    
+        <div class="bubbles">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+            <div class="bubble-3"></div>
+            <div class="bubble-4"></div>
+            <div class="bubble-5"></div>
+            <div class="bubble-6"></div>
+            <div class="bubble-7"></div>
+        </div>
+        <div class="SvgImage"></div>
+
+        <div class="quote">
+            <h1>Welcome to <span> Bhasha</span>Nayan<br> – Your Gateway to Seamlessly Recognize Sign Language!</h1>
+        </div>
+
+        <div class="thought">
+            <div class="first">
+                <p>Register! for better user environment.</p>
+            </div>
+            <div class="more">
+                <p>Free to use. Just open your camera and get ready to make our world equal for all.</p>
+            </div>
+        </div>
+
+        <div class="buttonss">
+            <button class="begin-button1" type="submit" onclick="window.location.href='./opening1.html'">Start Now!</button>
+            <button class="begin-button2" type="submit"><a href="{{ url_for('login') }}">Login</a></button>
+            <button class="begin-button3" type="submit"><a href="{{ url_for('registration') }}">Register</a></button>
+        </div>
+
+        <footer class="footer bg-dark">
+            <div class="social">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="https://mail.google.com/mail/"><i class="fas fa-envelope fa-2x"></i></a>
+          </div>
+          <p>Copyright &copy; 2024</p>
+        </footer>
+    </main>
+
+</body>
+</html>

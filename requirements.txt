@@ -1,0 +1,10 @@
+tf-nightly>=2.5.0.dev
+flask==2.3.2
+mediapipe==0.10.21
+opencv-python==4.11.0.86
+tensorflow==2.19.0
+scikit-learn==1.6.1
+matplotlib==3.9.4
+python-dotenv==1.0.1
+flask-mysqldb==2.0.0
+mysqlclient==2.2.4

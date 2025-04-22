@@ -1,0 +1,94 @@
+<!DOCTYPE html> <html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width,
+
+initial-scale=1.0">
+
+<title>Login Form in HTML and CSS | Codehal</title> 
+<link rel="stylesheet" href="{{ url_for('static', filename='log.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<link rel="stylesheet" href="log.css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="CSS/styles.css"/>
+</head>
+
+
+<body>
+  
+    <header>
+      <div class="TOP">
+        <div id="navbar" class="navbartop">
+            <h1 class="logo">
+                
+                <img src="{{ url_for('static', filename='Group1.png') }}" alt="AppName">
+            </h1>
+            
+          </div> 
+        <div class="navi">
+            <ul>
+              <li><a href="{{ url_for('openning') }}">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About Us</a></li>
+              <li><a href="{{ url_for('login') }}">Login</a></li>
+              <li><a href="{{ url_for('registration') }}">Register</a></li>
+            </ul>
+        </div>
+       </div>
+      </header>
+
+  <div class="bubbles">
+    <div class="bubble-1"></div>
+    <div class="bubble-2"></div>
+    <div class="bubble-3"></div>
+    <div class="bubble-4"></div>
+    <div class="bubble-5"></div>
+    <div class="bubble-6"></div>
+    <div class="bubble-7"></div>
+</div>
+
+<form id="loginForm" method="POST" action="{{ url_for('login') }}">
+  <div class="wrapper">
+    <h1>Login</h1>
+
+    <div class="input-box">
+      <input type="text" placeholder="Username or Email" required name="email">
+    </div>
+    <div class="input-box">
+      <input type="password" placeholder="Password" required name="password">
+    </div>
+
+    <button type="submit" class="btn">Log in</button>
+
+    <div class="register-link">
+      <p>Don't have an account? <a href="{{ url_for('registration') }}">Register</a></p>
+    </div>
+  </div>
+</form>
+
+<!-- your login successful -->
+  
+
+
+
+<script src="log.js"></script>
+
+</div>
+<footer class="footer bg-dark">
+  <div class="social">
+  <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a>
+  <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter fa-2x"></i></a>
+  <a href="https://www.youtube.com/"><i class="fab fa-youtube fa-2x"></i></a>
+  <a href="https://mail.google.com/mail/"><i class="fas fa-envelope fa-2x"></i></a>
+</div>
+<p>Copyright &copy; 2024</p>
+</footer>
+</body>
+</html>

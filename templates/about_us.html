@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhasa Nayan - About Us</title>
+    <link rel="stylesheet" href="about_us.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about_us.css') }}">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <header>
+        <div class="TOP">
+            <div id="navbar" class="navbartop">
+                <h1 class="logo">
+                    
+                    <img src="{{ url_for('static', filename='Group1.png') }}" alt="AppName">
+                </h1>
+                
+              </div> 
+            <div class="navi">
+                <ul>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#nayan">Why Bhasha Nayan?</a></li>
+                    <li><a href="{{ url_for('openning') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('registration') }}">Register</a></li>
+
+                </ul>
+            </div>
+           </div>
+    </header>
+   
+        
+  
+
+    <div class="bubbles">
+        <div class="bubble-1"></div>
+        <div class="bubble-2"></div>
+        <div class="bubble-3"></div>
+        <div class="bubble-4"></div>
+        <div class="bubble-5"></div>
+        <div class="bubble-6"></div>
+        <div class="bubble-7"></div>
+    </div>
+    <div class="page">
+        <section id="about" class="content">
+            <img src="{{ url_for('static', filename='alphabet-1298289_1920.png') }}" alt="Left Image" class="side-images">
+            <div class="contents">
+                <h2>About Us</h2>
+                <p>Welcome to <span style="color:red">BHASHA NAYAN</span>, your gateway to understanding and communicating through <span style= color:red>Indian Sign Language</span>(ISL). Our mission is to bridge the gap between the hearing and the non-hearing communities and to empower deaf individuals to reach their full potential by promoting awareness and proficiency in ISL.</p>
+            </div>
+
+            <img src="{{ url_for('static', filename='alphabet-1298311_1920.png') }}" alt="Right Image" class="side-images">
+        </section>
+        <section id="vision" class="contentss">
+            <div class="text-content">
+                <h2>Our Vision</h2>
+                <p>To create an inclusive society where everyone can communicate without barriers. A society where deaf individuals have equal opportunities to access education,employment and social interactions.We raise awerness about ISL and its significance in the lives of deaf people.</p>
+            </div>
+
+            <img src="{{ url_for('static', filename='alphabet-1298712_1920.png') }}" alt="Right Image" class="side-image">
+        </section>
+        <section id="mission" class="contentss">
+            <div class="text-content">
+                <h2>Our Mission</h2>
+                <ul>
+                    <li>Provide easy-to-follow tutorials on ISL.</li>
+
+                    <li>Share resources and tools to help learn and practice ISL.</li>
+
+                    <li>Foster a community of learners and advocates for the deaf and hard of hearing.</li>
+
+                </ul>
+            </div>
+
+            <img src="{{ url_for('static', filename='alphabet-1298315_1920.png') }}" alt="Right Image" class="side-image">
+        </section>
+    <section id="nayan" class="contentss">
+        <div class="text-content">
+            <h2>Why Bhasha Nayan?</h2>
+            <ul>
+
+               <li><b>Accessibility:</b> We offer content that's easy to understand and use.</li>
+                
+                <li><b>Community:</b> Connect with others who are learning ISL.</li>
+                
+                <li><b>Support:</b> We are here to guide you every step of the way.</li>
+            </ul>
+        </div>
+
+        <img src="{{ url_for('static', filename='alphabet-1298302_1920.png') }}" alt="Right Image" class="side-images">
+    
+    
+</div>      
+    <footer class="footer bg-dark">
+        <div class="social">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://www.youtube.com/"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="https://mail.google.com/mail/"><i class="fas fa-envelope fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; 2024</p>
+    </footer>
+</section>
+</body>
+</html>
