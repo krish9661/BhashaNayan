@@ -1,5 +1,10 @@
 # BhashaNayan
 Bhashanayan is an accessibility-focused web application that enables seamless communication between individuals who use sign language and those who don’t — especially in public service settings like hospitals, transit stations, and government offices.
+![poster Final 1  (1)](https://github.com/user-attachments/assets/23f8b7ef-d5c1-445f-9550-cf1c9da1076d)
+
+
+
+
 
 # UI Design
 ![Screenshot 2025-04-22 214844](https://github.com/user-attachments/assets/d6d54d09-29cf-466a-87ee-8ca20847ac7b)
